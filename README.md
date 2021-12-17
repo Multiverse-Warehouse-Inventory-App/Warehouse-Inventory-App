@@ -15,10 +15,10 @@
   
 # Project Planning
   
-  ![image](public\img\Kanban.png)
+  <img width="627" alt="Kanban" src="https://user-images.githubusercontent.com/68476218/146608159-fcc01f4d-7eff-407b-a0c8-2ff40da33552.png">
   
- 
-  ![image](public\img\Orange Team-Warehouse Entity Relationship.drawio.png)
+  ![Orange Team-Warehouse Entity Relationship drawio](https://user-images.githubusercontent.com/68476218/146608059-513c4ac3-6edf-4ed5-92cc-556fc94e875e.png)
+
 
   
 # Testing
