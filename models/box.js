@@ -1,12 +1,11 @@
 const { sequelize } = require('../db')
 const { DataTypes, Model } = require("sequelize");
 
-class Pallet extends Model {}
+class Box extends Model {}
 
-Pallet.init(
+Box.init(
     {
-        isAvailable: DataTypes.BOOLEAN,
-        capacity: DataTypes.INTEGER
+        isReady: DataTypes.BOOLEAN
     },
     {
         sequelize,
@@ -14,4 +13,4 @@ Pallet.init(
     }
 );
 
-module.exports = { Pallet }
+module.exports = { Box }
