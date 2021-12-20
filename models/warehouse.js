@@ -5,7 +5,10 @@ class Warehouse extends Model {}
 
 Warehouse.init(
     {
-        name: DataTypes.STRING
+        name: DataTypes.STRING,
+        location: DataTypes.STRING,
+        image: DataTypes.STRING,
+        capacity: DataTypes.INTEGER
     },
     {
         sequelize,
