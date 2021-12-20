@@ -24,7 +24,7 @@ app.set("views", "./views");
 app.listen(port, () => {console.log(`Server listening at http://localhost:${port}`)})
 
 app.get('/', (req,res)=>{
-    res.redirect('/home')
+    res.redirect('/signin')
 })
 
 app.get('/warehouses', async (req, res) => {
