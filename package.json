@@ -384,7 +384,8 @@
   },
   "scripts": {
     "test": "jest",
-    "test:report": "jest --coverage=true"
+    "test:report": "jest --coverage=true",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -396,5 +397,8 @@
   "bugs": {
     "url": "https://github.com/Multiverse-Warehouse-Inventory-App/Warehouse-Inventory-App/issues"
   },
-  "homepage": "https://github.com/Multiverse-Warehouse-Inventory-App/Warehouse-Inventory-App#readme"
+  "homepage": "https://github.com/Multiverse-Warehouse-Inventory-App/Warehouse-Inventory-App#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
