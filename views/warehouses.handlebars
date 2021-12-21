@@ -1,7 +1,10 @@
 <section>
     {{#each warehouses}}
         <article>
-            <h2>{{this.name}}</h2>
+            <h2>Name of warehouse: {{this.name}}</h2>
+            <p>Location: {{this.location}}</p>
+    <img class="item-img" src="{{this.image}}" />
+            <p>Max capacity: {{this.capacity}}</p>
         </article>
     {{/each}}
 </section>
