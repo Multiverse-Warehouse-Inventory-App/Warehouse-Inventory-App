@@ -6,7 +6,8 @@ class Pallet extends Model {}
 Pallet.init(
     {
         isAvailable: DataTypes.BOOLEAN,
-        capacity: DataTypes.INTEGER
+        capacity: DataTypes.INTEGER,
+
     },
     {
         sequelize,
