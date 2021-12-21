@@ -1,7 +1,7 @@
 const { sequelize } = require('../db')
-const {Warehouse} = require('./warehouse')
-const {Pallet} = require('./pallet')
-const {Box} = require('./box')
+const {Warehouse} = require('../models/warehouse')
+const {Pallet} = require('../models/pallet')
+const {Box} = require('../models/box')
 
 Pallet.belongsTo(Warehouse);
 Warehouse.hasMany(Pallet);
@@ -12,4 +12,4 @@ Warehouse.hasMany(Box);
 Box.belongsTo(Pallet);
 Pallet.hasMany(Box)
 
-module.exports = {Warehouse, Pallet, Box}
+module.exports = {Warehouse, Pallet, Box, sequelize}
