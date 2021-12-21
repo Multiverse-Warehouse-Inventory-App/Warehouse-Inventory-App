@@ -7,12 +7,13 @@ Warehouse.init(
     {
         name: DataTypes.STRING,
         location: DataTypes.STRING,
+        capacity: DataTypes.INTEGER,      
         image: DataTypes.STRING,
-        capacity: DataTypes.INTEGER,        
+  
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
     }
 );
 

@@ -4,7 +4,6 @@ const { DataTypes, Model } = require("sequelize");
 class Pallet extends Model {}
 
 Pallet.init(
-<<<<<<< HEAD
   {
     isAvailable: DataTypes.BOOLEAN,
     image: DataTypes.STRING,
@@ -12,12 +11,6 @@ Pallet.init(
     currentCapacity: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
-=======
-    {
-        isAvailable: DataTypes.BOOLEAN,
-        capacity: DataTypes.INTEGER,
-
->>>>>>> main
     },
   },
   {

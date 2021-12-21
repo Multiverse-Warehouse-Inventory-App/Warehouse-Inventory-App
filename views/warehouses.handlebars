@@ -1,10 +1,55 @@
-<section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pallets</title>
+
+      <style>
+      .row {
+        justify-content: center !important;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+</head>
+<body>
+<iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" width="480" height="274" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cbs-comedy-bob-hearts-abishola-bobheartsabishola-PG1nBLxrY8ZlS08pTh">via GIPHY</a></p>
+<main>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     {{#each warehouses}}
-        <article>
-            <h2>Name of warehouse: {{this.name}}</h2>
+        <div class="col">
+          <div class="card shadow-lg">
+            <img src="{{this.image}}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></img>
+            <div class="card-body">
+            <h2>{{this.name}}</h2>
             <p>Location: {{this.location}}</p>
-    <img class="item-img" src="{{this.image}}" />
             <p>Max capacity: {{this.capacity}}</p>
-        </article>
-    {{/each}}
-</section>
+            <a href="/warehouses/{{id}}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+            <br><br>
+                <p class="text-muted">{{this.createdAt}}</p>
+                </div>
+              </div>
+            </div>
+    {{/each}}  
+          </div>
+        </div>
+      </div>
+</main>
+</body>
+</html>
