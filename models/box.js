@@ -5,7 +5,8 @@ class Box extends Model {}
 
 Box.init(
     {
-        isReady: DataTypes.BOOLEAN
+        isReady: DataTypes.BOOLEAN,
+
     },
     {
         sequelize,

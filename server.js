@@ -42,6 +42,10 @@ app.get("/warehouses/:id", async (req, res) => {
   res.render("warehouse", { warehouse });
 });
 
+app.get('/signin', (req, res)=>{
+    res.render('signin')
+})
+
 app.get("/new-warehouse-form", async (req, res) => {
   res.render("warehouseForm");
 });
