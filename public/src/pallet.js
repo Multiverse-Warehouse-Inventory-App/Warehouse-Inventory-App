@@ -22,10 +22,6 @@ addBox.addEventListener('click', async () =>{
     //Increment current boxes
     currentBox += 1
 
-    if (currentBox >= 5) {
-        console.log("You have hit the limit!")
-    }
-
     //update the likes counter
     boxCounter.innerHTML = currentBox
     //fetch the route for this id with the PUT method
@@ -36,6 +32,7 @@ addBox.addEventListener('click', async () =>{
         },
         body: JSON.stringify({
             currentCapacity: currentBox
+
         })
     })
 })

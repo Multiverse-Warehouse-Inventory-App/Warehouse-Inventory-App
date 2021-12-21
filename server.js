@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const { Warehouse, Pallet } = require("./models");
+const { Warehouse, Pallet } = require("./tests/index");
 const Handlebars = require("handlebars");
 const expressHandlebars = require("express-handlebars");
 const {
