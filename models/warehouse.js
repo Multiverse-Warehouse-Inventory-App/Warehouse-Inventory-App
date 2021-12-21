@@ -8,7 +8,7 @@ Warehouse.init(
         name: DataTypes.STRING,
         location: DataTypes.STRING,
         image: DataTypes.STRING,
-        capacity: DataTypes.INTEGER
+        capacity: DataTypes.INTEGER,        
     },
     {
         sequelize,
