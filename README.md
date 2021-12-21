@@ -1,5 +1,6 @@
 # P | E | M  Warehouse Management System App
-#### About
+####
+# About
 The Verizon Operations and Logistics Team is looking for a full redesign of our warehouse inventory management system and we would like you to build a prototype. A list of user stories and key features have been provided for you and your teammates.
 
 Your team has been selected because of the range of skills and experiences you bring to the table.  It will be up to you how you divide responsibilities in this project but note that your team includes a representative from our Web Dev, Full Stack, and a Cloud tracks.
