@@ -1,0 +1,54 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #d1ebff
+}
+
+.container
+{
+    position: relative;
+    width: 600px;
+    height: 450px;
+    margin: 3% auto;
+    padding: 10px;
+    border: 2px solid #113560;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px #369AD4;
+    display: flex;
+}
+
+.container:hover{
+    box-shadow: 0 5px 30px #369AD4;
+}
+        
+        
+.box
+{
+position:relative;
+width: 235px;
+height: 435px;
+border: 3px solid #113560;
+box-sizing: border-box;
+border-radius: 20px;
+padding: 10px;
+margin: 5px;
+margin-left: 10px;
+}
+
+.imgBox
+{
+float: right;
+display: flexbox;
+margin-bottom: 50px;
+margin-right: 5px;
+margin-left: 25px;
+}
+
+/* .contentBox
+{
+display: flex;
+float:bottom; */
+
+.c

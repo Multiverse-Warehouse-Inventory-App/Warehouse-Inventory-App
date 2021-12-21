@@ -23,9 +23,11 @@ app.set("views", "./views");
 
 app.listen(port, () => {console.log(`Server listening at http://localhost:${port}`)})
 
-app.get('/', (req,res)=>{
-    res.redirect('/signin')
+app.get('/signin', (req, res)=>{
+    res.render('signin')
 })
+
+
 
 app.get('/warehouses', async (req, res) => {
     const warehouses = await Warehouse.findAll();
