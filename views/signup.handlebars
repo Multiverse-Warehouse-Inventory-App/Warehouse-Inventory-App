@@ -1,0 +1,13 @@
+<h2>Welcome to P|E|M Warehouse Management System</h2>
+<h3>Create a username and password to login</h3>
+<form action="/signup" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br/>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br/>
+    <label for="confirm">Confirm Password:</label>
+    <input type="password" id="confirm" name="confirm" required><br/>
+    <button type="submit">Create Account</button>
+</form>
+<h3>{{employeeAlert}}</h3>
+<a href="/warehouses"><h2>Back</h2></a>
