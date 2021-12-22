@@ -35,7 +35,7 @@ section
 .container
 {
     position: relative;
-    width: 950px;
+    width: 900px;
     height: 500px;
     display: flex;
     flex-direction: row;
