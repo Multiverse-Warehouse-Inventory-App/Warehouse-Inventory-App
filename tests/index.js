@@ -2,6 +2,7 @@ const { sequelize } = require('../db')
 const {Warehouse} = require('../models/warehouse')
 const {Pallet} = require('../models/pallet')
 const {Box} = require('../models/box')
+const {Employee} = require('../models/employee')
 
 Pallet.belongsTo(Warehouse);
 Warehouse.hasMany(Pallet);

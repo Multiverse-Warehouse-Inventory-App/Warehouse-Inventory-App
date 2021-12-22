@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const { Warehouse, Pallet } = require("../tests/index");
+const { Warehouse, Pallet} = require("../tests/index");
+const {Employee} = require("../models/employee");
 // bcrypt encryption imported
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+
+router.get('/', (req, res) =>{
+    res.redirect('/home')
+})
 
 router.get("/signin", (req, res) => {
     res.render("signin");
@@ -50,6 +55,7 @@ router.get("/signin", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
     const confirm = req.body.confirm;
+    console.log(`Username: ${username} Password: ${password}`)
     if (password !== confirm) {
       let employeeAlert = "Signup Failed";
       res.render("signup", { username });
@@ -60,7 +66,7 @@ router.get("/signin", (req, res) => {
           username: username,
           password: hash,
         });
-        let employeeAlert = `Welcome, $(newEmployee.username)!`;
+        let employeeAlert = `Welcome, ${newEmployee.username}!`;
         const foundEmployee = await Employee.findByPk(newEmployee.id);
         if (foundEmployee) {
           res.render("signup", { employeeAlert });
