@@ -55,7 +55,7 @@ PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web
 ![PEM Inventory Management System drawio (1)](https://user-images.githubusercontent.com/94469645/146900938-74816a80-f279-4920-8b3e-95a946a1c1aa.png)
 
 
-
-
   
 # Testing
+#### CRUD Jest Testing
+![CRUD Testing and Report](https://user-images.githubusercontent.com/94469645/147026871-85c40b7e-4b13-4bd0-b751-2f790ca01aa4.PNG)
