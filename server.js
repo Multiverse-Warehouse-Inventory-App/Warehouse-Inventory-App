@@ -7,9 +7,6 @@ const expressHandlebars = require("express-handlebars");
 const {
   allowInsecurePrototypeAccess,
 } = require("@handlebars/allow-prototype-access");
-const warehouseDB = require("./routes/routes");
-
-app.use('/', warehouseDB);
 
 // support the parsing of incoming requests with urlencoded payloads (e.g. form POST)
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +16,8 @@ app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
 // setup our templating engine
+const warehouseDB = require("./routes/routes");
+app.use('/', warehouseDB);
 const handlebars = expressHandlebars.create({
   handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
