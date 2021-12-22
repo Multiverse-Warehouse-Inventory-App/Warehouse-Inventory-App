@@ -27,6 +27,11 @@ app.set("views", "./views");
 
 app.listen(port, () => {console.log(`Server listening at http://localhost:${port}`)})
 
+app.get('/home', (req, res)=>{
+  res.render('home')
+})
+
+
 app.get('/signin', (req, res)=>{
     res.render('signin')
 })

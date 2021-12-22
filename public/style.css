@@ -243,3 +243,28 @@ input::placeholder
     justify-content: center;
 }
 
+.display-container
+{
+    content: wide;
+    max-width:1500px;
+    width: 1500px;
+    height: 800;
+}
+
+.hero
+{
+    width:  1500px;
+    height: 800;
+
+}
+
+.display-middle
+{
+    margin-top: center;
+}
+
+.xxlarge
+{
+    text: white;
+    
+
