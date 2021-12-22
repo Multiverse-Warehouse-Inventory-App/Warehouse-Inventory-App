@@ -1,4 +1,5 @@
 //import the associated models from index.js
+const { equal } = require('assert-plus')
 const {Warehouse, Pallet, Box, sequelize} = require('./index')
 
 //test Warehouse database CRUD
@@ -47,19 +48,19 @@ describe('Warehouse Database', () => {
         test('Warehouses have an location', async() => {
 
         const testWarehouse = await Warehouse.findOne({where: {name: 'Verizon'}});
-        expect(testWarehouse.location).toBe('Irving, TX')
+        expect(testWarehouse.location).toBe('Irving,TX')
     })
 
         test('Pallets have capacity', async() => {
 
-        const testPallet = await Pallet.findOne({where: {capacity:'4'}});
-        expect(testPallet.capacity).toBe('4')
+        const testPallet = await Pallet.findOne({where: {capacity:4}});
+        expect(testPallet.capacity).toBe(4)
     })
 
         test('Boxes status isReady', async() => {
 
-        const testBox = await Box.findOne({where: {isReady: 'true'}});
-        expect(testBox.isReady).toBe('true')
+        const testBox = await Box.findOne({where: {isReady: true}});
+        expect(testBox.isReady).toStrictEqual (true)
 
 
     })
@@ -69,29 +70,32 @@ describe('Warehouse Database', () => {
         const testWarehouse = await Warehouse.findOne({where: {name: 'Amazon'}});
         const testWarehouse2 = await Warehouse.findOne({where: {name: 'Verizon'}});
 
-        expect(testWarehouse.location).toBe('Dallas, TX')
-        expect(testWarehouse2.location).toBe('Irving, TX')
+        expect(testWarehouse.location).toBe('Dallas,TX')
+        expect(testWarehouse2.location).toBe('Irving,TX')
     })
 
         test('Warehouses have many Pallets and Boxes', async()=> {
         //read test Warehouse instance from db
         const testWarehouse = await Warehouse.findOne({where: {name: 'Amazon'}});
-        const testWarehouse2 = await Warehouse.findOne({where: {name: 'Verizon'}});        
+        const testWarehouse2 = await Warehouse.findOne({where: {name: 'Verizon'}});  
+        // const testPalletA = await Pallet.findOne({where: {isAvailable: false}}); 
+        // const testPalletB = await Pallet.findOne({where: {isAvailable: true}});  
+
         const testPallet1 = await Pallet.findOne({where: {capacity: '4'}})
         const testPallet2 = await Pallet.findOne({where: {capacity: '3'}})
         const testPallet3 = await Pallet.findOne({where: {capacity: '2'}})
         
         const testPallet4 = await Pallet.findOne({where: {capacity: '1'}})
-        const testPallet5 = await Pallet.findOne({where: {capacity: '2'}})
-        const testPallet6 = await Pallet.findOne({where: {capacity: '4'}})
+        // const testPallet5 = await Pallet.findOne({where: {capacity: '2'}})
+        // const testPallet6 = await Pallet.findOne({where: {capacity: '4'}})
 
-        const testBox1 = await Box.findOne({where: {isReady: 'true'}})
-        const testBox2 = await Box.findOne({where: {isReady: 'true'}})
-        const testBox3 = await Box.findOne({where: {isReady: 'true'}})
+        const testBox1 = await Box.findOne({where: {isReady: true}})
+        // const testBox2 = await Box.findOne({where: {isReady: true}})
+        // const testBox3 = await Box.findOne({where: {isReady: true}})
 
-        const testBox4 = await Box.findOne({where: {isReady: 'true'}})
-        const testBox5 = await Box.findOne({where: {isReady: 'true'}})
-        const testBox6 = await Box.findOne({where: {isReady: 'true'}})
+        // const testBox4 = await Box.findOne({where: {isReady: true}})
+        // const testBox5 = await Box.findOne({where: {isReady: true}})
+        // const testBox6 = await Box.findOne({where: {isReady: true}})
         
         //associations-add Pallet and Box to Warehouse
         await testWarehouse.addPallet(testPallet1)
@@ -99,42 +103,36 @@ describe('Warehouse Database', () => {
         await testWarehouse.addPallet(testPallet3)
 
         await testWarehouse2.addPallet(testPallet4)
-        await testWarehouse2.addPallet(testPallet5)
-        await testWarehouse2.addPallet(testPallet6)
+        // await testWarehouse2.addPallet(testPallet5)
+        // await testWarehouse2.addPallet(testPallet6)
 
-        await testWarehouse.addBox(testBox1)
-        await testWarehouse.addBox(testBox2)
-        await testWarehouse.addBox(testBox3)
+        await testPallet1.addBox(testBox1)
+        // await testPalletA.addBox(testBox2)
+        // await testPalletA.addBox(testBox3)
 
-        await testWarehouse2.addBox(testBox4)
-        await testWarehouse2.addBox(testBox5)        
-        await testWarehouse2.addBox(testBox6)
+        // await testPalletB.addBox(testBox4)
+        // await testPalletB.addBox(testBox5)        
+        // await testPalletB.addBox(testBox6)
 
         const PalletList = await testWarehouse.getPallets()
-        const BoxList = await testWarehouse.getBoxs()
+        const BoxList = await testPallet1.getBoxes()
 
         const PalletList2 = await testWarehouse2.getPallets()
-        const BoxList2 = await testWarehouse2.getBoxs()
+        console.log(PalletList2);
+        // const BoxList2 = await testPalletB.getBoxes()
 
         expect(PalletList.length).toBe(3)
         expect(PalletList[0] instanceof Pallet).toBeTruthy()
-        expect(PalletList[0].capacity).toMatch('4')
-        expect(PalletList[1].capacity).toMatch('3')
-        expect(PalletList[2].capacity).toMatch('2')
+        expect(PalletList[0].capacity).toBe(4)
+        expect(PalletList[1].capacity).toBe(3)
+        expect(PalletList[2].capacity).toBe(2)
 
-        expect(PalletList2[0].capacity).toMatch('1')
-        expect(PalletList2[1].capacity).toMatch('2')
-        expect(PalletList2[2].capacity).toMatch('3')
+        expect(PalletList2[0].capacity).toBe(1)
 
-        expect(BoxList.length).toBe(3)
+        expect(BoxList.length).toBe(1)
         expect(BoxList[0] instanceof Box).toBeTruthy()
-        expect(BoxList[0].isReady).toMatch('true')
-        expect(BoxList[1].isReady).toMatch('true')
-        expect(BoxList[2].isReady).toMatch('true')
-
-        expect(BoxList2[0].isReady).toMatch('true')
-        expect(BoxList2[0].isReady).toMatch('true')
-        expect(BoxList2[2].isReady).toMatch('true')
+        expect(BoxList[0].isReady).toBe(true)
+ 
     
     })
 
