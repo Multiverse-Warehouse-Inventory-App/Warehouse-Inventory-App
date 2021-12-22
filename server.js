@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+const { sequelize } = require('./db')
 const { Warehouse, Pallet } = require("./tests/index");
 const Handlebars = require("handlebars");
 const expressHandlebars = require("express-handlebars");
@@ -23,7 +24,9 @@ app.set("view engine", "handlebars");
 app.set("views", "./views");
 
 app.listen(port, () => {
+  sequelize.sync(() => {
   console.log(`Server listening at http://localhost:${port}`);
+  })
 });
 
 app.get("/", (req, res) => {
