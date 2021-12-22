@@ -32,24 +32,27 @@
 <div class="album py-5 bg-light">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    {{#each warehouses}}
+{{#each pallets}}
         <div class="col">
-          <div class="card shadow-lg">
+          <div class="card shadow-sm">
             <img src="{{this.image}}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></img>
             <div class="card-body">
-            <h2>{{this.name}}</h2>
-            <p>Location: {{this.location}}</p>
-            <p>Max capacity: {{this.capacity}}</p>
-            <a href="/warehouses/{{id}}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-            <br><br>
-                <p class="text-muted">{{this.createdAt}}</p>
+    <p>Capacity: {{this.capacity}}</p>
+    <p>Current Capacity: {{this.currentCapacity}}</p>
+    <img class="item-img"  />
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="/pallets/{{id}}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
                 </div>
+                <small class="text-muted">9 mins</small>
               </div>
             </div>
-    {{/each}}  
           </div>
         </div>
+  {{/each}}  
       </div>
+    </div>
+  </div>
 </main>
 </body>
 </html>

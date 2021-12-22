@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+              .row {
+        justify-content: center !important;
+      }
+    </style>
+</head>
+<body>
+    
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-1">
+        <div class="col">
+          <div class="card shadow-lg">
+    <h2 id="item-name" class="text-center">Pallet ID: {{pallet.id}}</h2>
+    <img class="item-img" src="{{pallet.image}}" />
+    <br>
+    <p id="capacity"><strong>Capacity:</strong> {{pallet.capacity}}</p>
+    <br>
+    <p><strong>Current number of boxes:</strong> <span id="boxCounter">{{pallet.currentCapacity}}</span></p>
+    <br>
+    <div class="btn-group">
+    <button class="btn btn-sm btn-outline-secondary" id="addBoxes">Add Boxes</button>
+    <button class="btn btn-sm btn-outline-secondary" id="removeBoxes">Remove Boxes</button>
+    <br><br>
+    </div>
+    <br><br>
+    <button class="btn btn-sm btn-outline-secondary" id="deletePallet">Remove Pallet</button>
+    <script src="../src/pallet.js"></script>
+    <br>
+                <p class="text-muted">{{pallet.createdAt}}</p>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+<script src="../src/warehouse.js"></script>
+</body>
+</html>

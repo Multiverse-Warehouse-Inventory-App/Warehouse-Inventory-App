@@ -1,8 +1,7 @@
-# P | E | M  Warehouse Management System App
-#### About
-The Verizon Operations and Logistics Team is looking for a full redesign of our warehouse inventory management system and we would like you to build a prototype. A list of user stories and key features have been provided for you and your teammates.
-
-Your team has been selected because of the range of skills and experiences you bring to the table.  It will be up to you how you divide responsibilities in this project but note that your team includes a representative from our Web Dev, Full Stack, and a Cloud tracks.
+# P | E | M Inc.  Warehouse Management System 
+####
+# About
+PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web Development, Full Stack, and Cloud Engineering. The Verizon Operations and Logistics Team is looking for a full redesign of their warehouse inventory management system and has tasked PEM, Inc. to present a prototype of a redesigned Warehouse Management System that supports key essential elements while also reaching for stretch goals that are optional in completing the the task of "Building a Better Warehouse Management System".
 
 
 # Meet The Team
@@ -39,6 +38,7 @@ Your team has been selected because of the range of skills and experiences you b
       <li>SQlite3</li>
       <li>Postman</li>
       <li>handlebars</li>
+      <li>Bootstrap</li>
       <li>express-handlebars</li>
   </ul>
   
@@ -55,7 +55,7 @@ Your team has been selected because of the range of skills and experiences you b
 ![PEM Inventory Management System drawio (1)](https://user-images.githubusercontent.com/94469645/146900938-74816a80-f279-4920-8b3e-95a946a1c1aa.png)
 
 
-
-
   
 # Testing
+#### CRUD Jest Testing
+![CRUD Testing and Report](https://user-images.githubusercontent.com/94469645/147026871-85c40b7e-4b13-4bd0-b751-2f790ca01aa4.PNG)
