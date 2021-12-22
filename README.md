@@ -1,7 +1,7 @@
 # P | E | M Inc.  Warehouse Management System 
 ####
 # About
-PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web Development, Full Stack, and Cloud Engineering. The Verizon Operations and Logistics Team is looking for a full redesign of their warehouse inventory management system and has tasked PEM, Inc. to present a prototype of a redesigned Warehouse Management System that supports key essential elements while also reaching for stretch goals that are optional in completing the task.
+PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web Development, Full Stack, and Cloud Engineering. The Verizon Operations and Logistics Team is looking for a full redesign of their warehouse inventory management system and has tasked PEM, Inc. to present a prototype of a redesigned Warehouse Management System that supports key essential elements while also reaching for stretch goals that are optional in completing the the task of "Building a Better Warehouse Management System".
 
 
 # Meet The Team
