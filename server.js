@@ -31,6 +31,10 @@ app.get('/signin', (req, res)=>{
     res.render('signin')
 })
 
+app.get('/home', (req, res)=>{
+  res.render('home')
+})
+
 // Post Route triggered by form submit action
 app.post('/signin'), async (req,res) =>{
   const theEmployee = await Employee.findOne({
