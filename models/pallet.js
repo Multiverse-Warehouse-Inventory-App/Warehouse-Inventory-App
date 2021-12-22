@@ -5,17 +5,20 @@ class Pallet extends Model {}
 
 Pallet.init(
   {
-    isAvailable: DataTypes.BOOLEAN,
-    image: DataTypes.STRING,
+    isAvailable: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
     capacity: DataTypes.INTEGER,
     currentCapacity: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
+    image: DataTypes.STRING,
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
   }
 );
 

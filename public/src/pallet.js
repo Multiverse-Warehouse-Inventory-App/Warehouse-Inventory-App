@@ -2,10 +2,10 @@ const addBox = document.getElementById('addBoxes');
 const removeBox = document.getElementById('removeBoxes');
 const boxCounter = document.getElementById('boxCounter');
 const id = window.location.pathname.split('/pallets/')[1];
-const deleteWarehouse = document.getElementById('deletePallet')
+const deletePallet = document.getElementById('deletePallet')
 
 //add event to delete pallet
-deleteWarehouse.addEventListener('click', async () => {
+deletePallet.addEventListener('click', async () => {
     //fetch sauce route for this id with the DELETE method
     let res = await fetch(`/pallets/${id}`, {
         method: 'DELETE'
@@ -21,7 +21,6 @@ addBox.addEventListener('click', async () =>{
     console.log(currentBox)
     //Increment current boxes
     currentBox += 1
-
     //update the likes counter
     boxCounter.innerHTML = currentBox
     //fetch the route for this id with the PUT method

@@ -1,5 +1,5 @@
 const wid = window.location.pathname.split('/warehouses/')[1];
-const deleteWarehouse = document.getElementById('delete')
+const deleteWarehouse = document.getElementById('deleteWarehouse')
 
 //add event to delete warehouse
 deleteWarehouse.addEventListener('click', async () => {

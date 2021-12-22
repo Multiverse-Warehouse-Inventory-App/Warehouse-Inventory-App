@@ -273,6 +273,7 @@
     "path-parse": "^1.0.7",
     "path-to-regexp": "^0.1.7",
     "performance-now": "^2.1.0",
+    "pg": "^8.7.1",
     "pg-connection-string": "^2.5.0",
     "picocolors": "^1.0.0",
     "picomatch": "^2.3.0",
@@ -385,9 +386,15 @@
     "yargs-parser": "^20.2.9"
   },
   "scripts": {
-    "test": "jest",
-    "test:report": "jest --coverage=true",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "NODE_ENV=dev PORT=3000 nodemon server.js",
+    "test": "PORT=3001 jest --watchAll",
+    "test:cypress": "PORT=3001 cypress open",
+    "test:report": "jest --coverage=true"
+  },
+  "engines": {
+    "node": "14",
+    "npm": "6"
   },
   "repository": {
     "type": "git",
@@ -402,6 +409,5 @@
   "homepage": "https://github.com/Multiverse-Warehouse-Inventory-App/Warehouse-Inventory-App#readme",
   "directories": {
     "test": "tests"
-  },
-  "devDependencies": {}
+  }
 }
