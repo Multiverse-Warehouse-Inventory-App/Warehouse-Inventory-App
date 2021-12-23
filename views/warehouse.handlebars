@@ -7,6 +7,33 @@
 
     <style>
       .row { justify-content: center !important; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
   </head>
   <body>
@@ -17,19 +44,28 @@
           <div class="col">
             <div class="card shadow-lg">
               <h2 id="item-name" class="text-center">Warehouse ID:
-                {{warehouse.id}}</h2>
-              <p><strong>Name:</strong> {{warehouse.name}}</p>
-              <p><strong>Location:</strong> {{warehouse.location}}</p>
-              <img class="item-img" src="{{warehouse.image}}" />
+                {{thisWarehouse.id}}</h2>
+              <p><strong>Name:</strong> {{thisWarehouse.name}}</p>
+              <p><strong>Location:</strong> {{thisWarehouse.location}}</p>
+              <img class="item-img" src="{{thisWarehouse.image}}" />
               <br />
-              <h3 id="capacity">Capacity: {{warehouse.capacity}}</h3>
+              <h3 id="capacity">Capacity: {{thisWarehouse.capacity}}</h3>
+              <br>
+              <div class="dropdown" id="PalletId" name="PalletId">
+                <button class="btn btn-lg btn-outline-secondary">Current Pallet Inventory</button>
+                  <div class="dropdown-content">
+                {{#each thisWarehouse.Pallets}}
+                  <a href="/pallets/{{this.id}}">ID: {{this.id}} | Max Capacity: {{this.capacity}} | Current Capacity: {{this.currentCapacity}}</a>
+                {{/each}}
+                </div>
+              </div><br />
               <br />
               <button
                 class="btn btn-sm btn-outline-secondary"
                 id="deleteWarehouse"
               >Delete</button>
               <br />
-              <p class="text-muted">{{warehouse.createdAt}}</p>
+              <p class="text-muted">{{thisWarehouse.createdAt}}</p>
             </div>
           </div>
         </div>
