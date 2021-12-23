@@ -43,6 +43,16 @@ PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web
   </ul>
   
 # Project Planning
+#### PROTOTYPE
+![Prototype 1](https://user-images.githubusercontent.com/94469645/147245564-30a60db3-0aed-4ed8-b019-884ca8f3342b.PNG) ![Prototype5](https://user-images.githubusercontent.com/94469645/147245767-af65a490-52a4-4fdc-aaa1-e678daefec18.PNG) ![Prototype4](https://user-images.githubusercontent.com/94469645/147245747-1c246d1a-b545-4e17-9469-ae0124d109a3.PNG) 
+
+
+
+
+
+
+
+
 #### KANBAN BOARD
 ![Kanban Board (2)](https://user-images.githubusercontent.com/94469645/146900168-d76ba27a-4b13-4732-b0e5-ff08a233ff7d.PNG)
 ![Kanban Board N (3)](https://user-images.githubusercontent.com/94469645/146900199-d7688384-6e07-40ac-87df-38bff4c963a2.png)
@@ -50,11 +60,8 @@ PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web
 #### ERD- ENTITY RELATIONSHIP DIAGRAM
 ![PEM-WMS Entity Relationship drawio (3)](https://user-images.githubusercontent.com/94469645/146901242-f16cef08-4882-41bd-a9f6-f4cf51e25ccb.png)
 
-
 #### SEQUENTIAL RELATIONSHIP DIAGRAM
 ![PEM Inventory Management System drawio (1)](https://user-images.githubusercontent.com/94469645/146900938-74816a80-f279-4920-8b3e-95a946a1c1aa.png)
-
-
   
 # Testing
 #### CRUD Jest Testing
