@@ -1,4 +1,63 @@
-<form action="/addPallet" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup Page</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+    <body>
+        <div class="container">
+            <div class="lhs-box">
+                <img class="logoBox" src="logo.png" alt="logo">
+                {{!-- <div class="list-item-1"></div>   --}}
+                <div class="list-item-2">
+                    <p class="txt-1">Take charge of your inventory</p>
+                    <p class="txt-2">Manage with total accuracy</p> 
+                </div>
+                <div class="list-item-3">
+                    <p class="txt-3">Add Pallet</p>
+                </div>
+                <div class="signin">
+                    <form action="/addPallet" method="post">
+                    <div class="custom-field">
+                        <label for="capacity"></label>
+                        <input type="text" id="capacity" name="capacity" placeholder="Box Capacity:" required><br/>
+                        <label for="image"></label>
+                        <input type="url" id="image" name="image" placeholder="URL:" required><br/>
+                        <label for="WarehouseId" id="WarehouseId">Select a Warehouse:</label><br/>
+                        <select class="form-control" id="WarehouseId" name="WarehouseId">
+                        <option value=""></option>
+                        {{#each allWarehouses}}
+                        <option value="{{this.id}}">{{this.name}}</option>
+                        {{/each}}
+                        </select><br/>
+                        <button class="btn btn-primary" type="submit">Add Pallet</button>
+                    </div>
+                    </form>
+                    <p>{{employeeAlert}}</p>
+                  </div>
+                </div>
+              
+            
+              <div class="rhs-box">
+                <img class="imgBox1" src="pallet.jpg" alt="Pallet">
+                <div class="contentBox">
+                <p>Preeti, Erica, & Martin Inc.</br>
+                Warehouse Management System</br>
+                (establish 12/17/2021)
+                </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+
+{{!-- <form action="/addPallet" method="post">
 
   <label for="capacity">What's it's Capaity Limit?:</label>
   <input type="number" id="capacity" name="capacity" required /><br />
@@ -16,5 +75,4 @@
 
 </form>
 
-<h3>You can add a new warehouse here!!</h3>
-
+<h3>You can add a new warehouse here!!</h3> --}}
