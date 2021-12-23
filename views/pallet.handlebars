@@ -20,12 +20,13 @@
                 {{pallet.id}}</h2>
               <img class="item-img" src="{{pallet.image}}" />
               <br />
-              <p id="capacity"><strong>Capacity:</strong>
-                {{pallet.capacity}}</p>
+              <p><strong>Capacity:</strong>
+                <span id="capacity">{{pallet.capacity}}</span></p>
               <br />
               <p><strong>Current number of boxes:</strong>
                 <span id="boxCounter">{{pallet.currentCapacity}}</span></p>
               <br />
+              <p id="note"></p>
               <div class="btn-group">
                 <button
                   class="btn btn-sm btn-outline-secondary"

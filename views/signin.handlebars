@@ -21,7 +21,7 @@
                     <p class="txt-3">Login</p>
                 </div>
                 <div class="signin">
-                    <form action="/signin" method="post"></form>
+                    <form action="/signin" method="post">
                     <div class="custom-field">
                         <input type="text" id="username" placeholder="Username"/>
                         <input type="password" id="password" placeholder="Password"/>
@@ -37,6 +37,7 @@
                         <p class="p1">Forgot Username?</p>
                         <p class="p2">Forgot Password?</p>
                     </div>
+                    <p>{{employeeAlert}}</p>
                     <div class="list-item-5">
                         <p class="txt-5">New User?</p>
                         <a href="/signup"><button type="button" class="btn btn-outline-secondary">Create Account</button></a>
