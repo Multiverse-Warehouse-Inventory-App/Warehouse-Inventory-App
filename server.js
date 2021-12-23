@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) =>{
-  res.redirect('/home')
+  res.redirect('/signin')
 })
 
 app.get("/home", (req, res) => {
@@ -61,7 +61,7 @@ app.post('/signin', async (req,res) =>{
         async function (err, result) {
           if (result) {
             let employeeAlert = `Welcome back, ${theEmployee.username}`;
-            res.render("signin", { employeeAlert });
+            res.render("warehouses", { employeeAlert });
           } else {
             let employeeAlert = "Sign-in Failed";
             res.render("signin", { employeeAlert });
@@ -151,14 +151,6 @@ app.get("/pallets/:id", async (req, res) => {
   res.render("pallet", { pallet });
 });
 
-app.get("/new-pallet-form", async (req, res) => {
-  res.render("palletForm");
-});
-
-app.post("/new-pallet", async (req, res) => {
-  await Pallet.create(req.body);
-  res.redirect("pallets");
-});
 
 app.put("/pallets/:id", async (req, res) => {
   const updatedPallet = await Pallet.update(req.body, {
@@ -175,12 +167,12 @@ app.delete("/pallets/:id", async (req, res) => {
   res.send(deletedPallet ? "Deleted" : "Deletion Failed");
 });
 
-app.get('/addWarehouse', async (req, res) =>{
+app.get('/addPallet', async (req, res) =>{
   const allWarehouses = await Warehouse.findAll()
-  res.render('addwarehouse', {allWarehouses})
+  res.render('addPallet', {allWarehouses})
 })
 
-app.post('/addWarehouse', async (req,res) => {
+app.post('/addPallet', async (req,res) => {
   const newPallet = await Pallet.create(req.body);
   const thisWarehouse = await Warehouse.findByPk(newPallet.WarehouseId)
   const Pallets = await Pallet.findAll()  
