@@ -2,7 +2,8 @@
 ####
 # About
 PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web Development, Full Stack, and Cloud Engineering. The Verizon Operations and Logistics Team is looking for a full redesign of their warehouse inventory management system and has tasked PEM, Inc. to present a prototype of a redesigned Warehouse Management System that supports key essential elements while also reaching for stretch goals that are optional in completing the the task of "Building a Better Warehouse Management System".
-
+![PEM QRCode -Video](https://user-images.githubusercontent.com/94469645/147249739-0006729b-ed3d-425c-a108-6e181683ee59.PNG)
+https://www.canva.com/design/DAEzI1tP5_c/7_K7l49bhlqFVTB_A5aHUw/edit
 
 # Meet The Team
 #### Preeti Das ![image](https://user-images.githubusercontent.com/94469645/146899632-305a86d2-6180-40c9-b490-e6b782ab8187.png)
@@ -46,11 +47,7 @@ PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web
 #### PROTOTYPE
 ![Prototype 1](https://user-images.githubusercontent.com/94469645/147245564-30a60db3-0aed-4ed8-b019-884ca8f3342b.PNG) ![Prototype5](https://user-images.githubusercontent.com/94469645/147245767-af65a490-52a4-4fdc-aaa1-e678daefec18.PNG) ![Prototype4](https://user-images.githubusercontent.com/94469645/147245747-1c246d1a-b545-4e17-9469-ae0124d109a3.PNG) 
 
-
-
-
-
-
+PEM Mobile WMS Prototype Document  https://docs.google.com/document/d/10rwLEPSGyQCkPrzKO27EevZ8LxLs1Gk745xsL4LEsqY/edit?usp=sharing
 
 
 #### KANBAN BOARD
