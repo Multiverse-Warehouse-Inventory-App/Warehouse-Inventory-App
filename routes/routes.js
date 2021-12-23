@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const { Warehouse, Pallet} = require("../tests/index");
+
 const {Employee} = require("../models/employee");
 // bcrypt encryption imported
 const bcrypt = require("bcrypt");
@@ -21,6 +22,8 @@ router.get("/signin", (req, res) => {
   // Post Route triggered by form submit action
   router.post("/signin"),
     async (req, res) => {
+      console.log(req.body.username);
+      console.log(req.body.password);
       const theEmployee = await Employee.findOne({
         where: {
           username: req.body.username,
