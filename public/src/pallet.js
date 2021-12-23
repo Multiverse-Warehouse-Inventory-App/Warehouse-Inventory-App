@@ -15,7 +15,7 @@ deletePallet.addEventListener('click', async () => {
     })
     console.log(res)
     //send user back to the pallets path
-    window.location.assign('/pallets')
+    window.location.assign('/warehouses')
   });
 
 addBox.addEventListener('click', async () =>{
