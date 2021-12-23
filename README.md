@@ -2,8 +2,18 @@
 ####
 # About
 PEM, Inc. is a collaborative team of Verizon Apprentices with backgrounds in Web Development, Full Stack, and Cloud Engineering. The Verizon Operations and Logistics Team is looking for a full redesign of their warehouse inventory management system and has tasked PEM, Inc. to present a prototype of a redesigned Warehouse Management System that supports key essential elements while also reaching for stretch goals that are optional in completing the the task of "Building a Better Warehouse Management System".
-![PEM QRCode -Video](https://user-images.githubusercontent.com/94469645/147249739-0006729b-ed3d-425c-a108-6e181683ee59.PNG)
-https://www.canva.com/design/DAEzI1tP5_c/7_K7l49bhlqFVTB_A5aHUw/edit
+
+Our team will demonstrate the skills we have learned thourghout the Verzion Thrive Apprenticeship/ Multiverse Bootcamp which include test-driven, object-oriented programming in JavaScript using a Node.js runtime environment; backend development building a SQLite database with a Sequelize Object Relational Mapper within an Express web framework to handle HTTP requests and responses; front-end development using handlebars and JavaScript DOM manipulation; and finally, development of a completed full-stack application following an Agile development process using Project Management Planning tools to manage and monitor project development using Jira Kanban Board, and Entity Relationship Diagram, and Sequential Relationship Diagram. A well, we used GitHub to support colaborative code development using commands:
+<ul> <li>git add .</li> <li>git commit -m</li><li>git push</li><li>git checkout main</li><li>git pull</li><li>git checkout "branch"</li><li>git rebase main</li> </ul>
+
+
+
+https://youtu.be/I-qmb_O0HSk 
+
+Scan QR Code
+
+![QR Code](https://user-images.githubusercontent.com/94469645/147266712-1327f2aa-398e-408e-b72e-578c365ffad8.PNG)
+
 
 # Meet The Team
 #### Preeti Das ![image](https://user-images.githubusercontent.com/94469645/146899632-305a86d2-6180-40c9-b490-e6b782ab8187.png)
@@ -41,6 +51,9 @@ https://www.canva.com/design/DAEzI1tP5_c/7_K7l49bhlqFVTB_A5aHUw/edit
       <li>handlebars</li>
       <li>Bootstrap</li>
       <li>express-handlebars</li>
+      <li>GitHub</li>
+      <li>Jira</li>
+      
   </ul>
   
 # Project Planning
@@ -61,5 +74,5 @@ PEM Mobile WMS Prototype Document  https://docs.google.com/document/d/10rwLEPSGy
 ![PEM Inventory Management System drawio (1)](https://user-images.githubusercontent.com/94469645/146900938-74816a80-f279-4920-8b3e-95a946a1c1aa.png)
   
 # Testing
-#### CRUD Jest Testing
+#### Test Driven Development (TDD ) CRUD Jest Testing
 ![CRUD Testing and Report](https://user-images.githubusercontent.com/94469645/147026871-85c40b7e-4b13-4bd0-b751-2f790ca01aa4.PNG)
