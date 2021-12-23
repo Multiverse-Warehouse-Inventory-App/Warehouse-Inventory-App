@@ -28,7 +28,7 @@ body
 .lhs-box
 {
     position:relative;
-    width: 250px;
+    width: 225px;
     height: 415px;
     border: 3px solid #113560;
     box-sizing: border-box;
@@ -177,6 +177,32 @@ input::placeholder
     font-size: 9px;
     margin-top: 0;
 }
+
+/* .alert 
+{
+    padding: 20px;
+    background-color: #f44336; Red
+    color: white;
+    margin-bottom: 15px;
+} */
+
+/* .closebtn 
+{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+} */
+
+/* .closebtn:hover 
+{
+    color: black;
+} */
+
 
 .list-item-5
 {
