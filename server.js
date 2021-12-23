@@ -61,7 +61,7 @@ app.post('/signin', async (req,res) =>{
         async function (err, result) {
           if (result) {
             let employeeAlert = `Welcome back, ${theEmployee.username}`;
-            res.redirect("warehouses");
+            res.render("home", { employeeAlert });
           } else {
             let employeeAlert = "Sign-in Failed";
             res.render("signin", { employeeAlert });
