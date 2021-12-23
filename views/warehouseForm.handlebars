@@ -1,13 +1,71 @@
-<h3>You can add a new warehouse here!!</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup Page</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+    <body>
+        <div class="container">
+            <div class="lhs-box">
+                <img class="logoBox" src="logo.png" alt="logo">
+                {{!-- <div class="list-item-1"></div>   --}}
+                <div class="list-item-2">
+                    <p class="txt-1">Take charge of your inventory</p>
+                    <p class="txt-2">Manage with total accuracy</p> 
+                </div>
+                <div class="list-item-3">
+                    <p class="txt-3">Add Warehouse</p>
+                </div>
+                <div class="signin">
+                    <form action="/warehouses" method="post">
+                    <div class="custom-field">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required />
+                      <label for="location">Location:</label>
+                      <input type="text" id="location" name="location" required />
+                      <label for="image">Image URL:</label>
+                      <input type="url" id="image" name="image" required />
+                      <label for="capacity">Capacity Limit:</label>
+                      <input type="number" id="capacity" name="capacity" required />
+                      <button class="btn btn-primary" type="submit">Add Warehouse</button>
+                    </div>
+                    </form>
+                    <p>{{employeeAlert}}</p>
+                  </div>
+                </div>
+              
+            
+              <div class="rhs-box">
+                <img class="imgBox1" src="warehouse.gif" alt="Warehouse-gif">
+                <div class="contentBox">
+                <p>Preeti, Erica, & Martin Inc.</br>
+                Warehouse Management System</br>
+                (establish 12/17/2021)
+                </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+{{!-- <h3>You can add a new warehouse here!!</h3>
 
 <form action="/warehouses" method="post">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required /><br />
-  <label for="location">Location:</label>
-  <input type="text" id="location" name="location" required /><br />
-  <label for="image">Image URL:</label>
-  <input type="url" id="image" name="image" required /><br />
-  <label for="capacity">Capaity Limit:</label>
-  <input type="number" id="capacity" name="capacity" required /><br />
-  <button type="submit" class="new-warehouse-btn">Add a new warehouse</button>
-</form>
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required /><br />
+                      <label for="location">Location:</label>
+                      <input type="text" id="location" name="location" required /><br />
+                      <label for="image">Image URL:</label>
+                      <input type="url" id="image" name="image" required /><br />
+                      <label for="capacity">Capaity Limit:</label>
+                      <input type="number" id="capacity" name="capacity" required /><br />
+                      <button type="submit" class="new-warehouse-btn">Add a new warehouse</button>
+</form> --}}

@@ -113,12 +113,18 @@ body
 {
     position: relative;
     font-family: Sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     padding-top: 0.25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+}
+
+#WarehouseId
+{
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 input
@@ -245,6 +251,18 @@ input::placeholder
     margin-left: 25px;
     width: 325px;
     height: 350px;
+    z-index: -1;
+}
+.imgBox1
+{
+    float: right;
+    display: flexbox;
+    margin-bottom: 50px;
+    margin-right: 5px;
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 325px;
+    height: 300px;
     z-index: -1;
 }
 
