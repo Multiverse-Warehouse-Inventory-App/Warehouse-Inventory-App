@@ -1,8 +1,10 @@
 const addBox = document.getElementById('addBoxes');
 const removeBox = document.getElementById('removeBoxes');
 const boxCounter = document.getElementById('boxCounter');
+const capacity = document.getElementById('capacity');
 const id = window.location.pathname.split('/pallets/')[1];
 const deletePallet = document.getElementById('deletePallet')
+const note = document.getElementById('note')
 
 //add event to delete pallet
 deletePallet.addEventListener('click', async () => {
@@ -18,11 +20,19 @@ deletePallet.addEventListener('click', async () => {
 addBox.addEventListener('click', async () =>{
     //get current boxes from counter
     let currentBox = parseInt(boxCounter.innerHTML)
+    let maxCapacity = parseInt(capacity.innerHTML)
     console.log(currentBox)
-    //Increment current boxes
-    currentBox += 1
-    //update the likes counter
-    boxCounter.innerHTML = currentBox
+    console.log(maxCapacity)
+
+ if(currentBox >= maxCapacity) {
+    note.innerHTML = "Limit has been reached"
+    return
+ } else {
+           //Increment current boxes
+           currentBox += 1
+           //update the likes counter
+           boxCounter.innerHTML = currentBox
+ }
     //fetch the route for this id with the PUT method
     let res = await fetch(`/pallets/${id}`, {
         method: 'PUT',
@@ -40,11 +50,16 @@ removeBox.addEventListener('click', async () =>{
     //get current boxes from counter
     let currentBox = parseInt(boxCounter.innerHTML)
     console.log(currentBox)
-    //Increment current boxes
+
+    if (currentBox <= 0) {
+        return
+    } else {
+            //Increment current boxes
     currentBox -= 1
-    
     //update the likes counter
     boxCounter.innerHTML = currentBox
+    }
+
     //fetch the route for this id with the PUT method
     let res = await fetch(`/pallets/${id}`, {
         method: 'PUT',

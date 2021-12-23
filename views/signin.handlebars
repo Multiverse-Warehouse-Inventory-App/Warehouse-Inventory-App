@@ -24,21 +24,22 @@
                     <p class="txt-3">Login</p>
                 </div>
                 <div class="signin">
-                    <form action="/" method="get"></form>
-                    <label class="custom-field">
+                    <form action="/signin" method="post">
+                    <div class="custom-field">
                         <input type="text" id="username" placeholder="Username"/>
                         <input type="text" id="password" placeholder="Password"/>
-                        <button type="button" class="btn btn-primary" id="submit" type="submit">Submit</button>
-                    </label>
+                        <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                    </div>
                     </form>
                 </div>
                     <div class="list-item-4">
                         <p class="p1">Forgot Username?</p>
                         <p class="p2">Forgot Password?</p>
                     </div>
+                    <p>{{employeeAlert}}</p>
                     <div class="list-item-5">
                         <p class="txt-5">New User?</p>
-                        <button type="button" class="btn btn-outline-secondary">Create Account</button>
+                        <button class="btn btn-outline-secondary">Create Account</button>
                     </div>
                 </div>
             </div>
