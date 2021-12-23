@@ -29,16 +29,16 @@ router.get("/signin", (req, res) => {
           username: req.body.username,
         },
       });
-      if (!thisEmployee) {
+      if (!theEmployee) {
         let employeeAlert = "Sign-in Failed";
         res.render("signin", { employeeAlert });
       } else {
         bcrypt.compare(
           req.body.password,
-          thisEmployee.password,
+          theEmployee.password,
           async function (err, result) {
             if (result) {
-              let employeeAlert = `Welcome back, ${thisEmployee.username}`;
+              let employeeAlert = `Welcome back, ${theEmployee.username}`;
               res.render("signin", { employeeAlert });
             } else {
               let employeeAlert = "Sign-in Failed";
@@ -90,7 +90,8 @@ router.get("/signin", (req, res) => {
   
   router.get("/warehouses/:id", async (req, res) => {
     const warehouse = await Warehouse.findByPk(req.params.id);
-    res.render("warehouse", { warehouse });
+    const pallet = await Pallet.findByPk(req.params.id);
+    res.render("warehouse", { warehouse, pallet });
   });
   
   router.get("/new-warehouse-form", async (req, res) => {

@@ -24,11 +24,11 @@
                     <p class="txt-3">Login</p>
                 </div>
                 <div class="signin">
-                    <form action="/signin" method="post"></form>
+                    <form action="/signin" method="post">
                     <div class="custom-field">
                         <input type="text" id="username" placeholder="Username"/>
                         <input type="text" id="password" placeholder="Password"/>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" id="submit" type="submit">Submit</button>
                     </div>
                     </form>
                     {{!-- <div class="alert">
@@ -40,9 +40,10 @@
                         <p class="p1">Forgot Username?</p>
                         <p class="p2">Forgot Password?</p>
                     </div>
+                    <p>{{employeeAlert}}</p>
                     <div class="list-item-5">
                         <p class="txt-5">New User?</p>
-                        <button type="button" class="btn btn-outline-secondary">Create Account</button>
+                        <button class="btn btn-outline-secondary">Create Account</button>
                     </div>
                 </div>
             
