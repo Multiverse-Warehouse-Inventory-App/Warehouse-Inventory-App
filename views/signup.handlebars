@@ -1,4 +1,64 @@
-<h2>Welcome to P|E|M Warehouse Management System</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup Page</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+    <body>
+        <div class="container">
+            <div class="lhs-box">
+                <img class="logoBox" src="logo.png" alt="logo">
+                {{!-- <div class="list-item-1"></div>   --}}
+                <div class="list-item-2">
+                    <p class="txt-1">Take charge of your inventory</p>
+                    <p class="txt-2">Manage with total accuracy</p>
+                </div>
+                <div class="list-item-3">
+                    <p class="txt-3">Signup</p>
+                </div>
+                <div class="signin">
+                    <form action="/signin" method="post"></form>
+                    <div class="custom-field">
+                        <input type="text" id="username" placeholder="Username"/>
+                        <input type="password" id="password" placeholder="Password"/>
+                        <input type="password" id="password" placeholder="Confirm Password"/>
+                        <button class="btn btn-primary" type="submit">Signup</button>
+                    </div>
+                    </form>
+                    {{!-- <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        This is an alert box.
+                    </div> --}}
+                </div>
+                    {{!-- <div class="list-item-4">
+                        <p class="p1">Forgot Username?</p>
+                        <p class="p2">Forgot Password?</p>
+                    </div> --}}
+                    {{!-- <div class="list-item-5">
+                        <p class="txt-5">New User?</p>
+                        <button type="button" href= "/signup" class="btn btn-outline-secondary">Create Account</button>
+                    </div> --}}
+                </div>
+            
+            <div class="rhs-box">
+                <img class="imgBox" src="image.PNG" alt="image">
+                <div class="contentBox">
+                <p>Preeti, Erica, & Martin Inc.</br>
+                Warehouse Management System</br>
+                (establish 12/17/2021)
+                </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+{{!-- <h2>Welcome to P|E|M Warehouse Management System</h2>
 <h3>Create a username and password to login</h3>
 <form action="/signup" method="post">
     <label for="username">Username:</label>
@@ -10,4 +70,4 @@
     <button type="submit">Create Account</button>
 </form>
 <h3>{{employeeAlert}}</h3>
-<a href="/warehouses"><h2>Back</h2></a>
+<a href="/warehouses"><h2>Back</h2></a> --}}
