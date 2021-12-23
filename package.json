@@ -410,6 +410,5 @@
   "homepage": "https://github.com/Multiverse-Warehouse-Inventory-App/Warehouse-Inventory-App#readme",
   "directories": {
     "test": "tests"
-  },
-  "devDependencies": {}
+  }
 }

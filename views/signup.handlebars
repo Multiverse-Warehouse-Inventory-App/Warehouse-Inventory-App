@@ -21,14 +21,18 @@
                     <p class="txt-3">Signup</p>
                 </div>
                 <div class="signin">
-                    <form action="/signin" method="post"></form>
+                    <form action="/signup" method="post">
                     <div class="custom-field">
-                        <input type="text" id="username" placeholder="Username"/>
-                        <input type="password" id="password" placeholder="Password"/>
-                        <input type="password" id="password" placeholder="Confirm Password"/>
-                        <button class="btn btn-primary" type="submit">Signup</button>
+                        <label for="username"></label>
+                        <input type="text" id="username" name="username" placeholder="Username:" required><br/>
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Password:" required><br/>
+                        <label for="confirm"></label>
+                        <input type="password" id="confirm" name="confirm" placeholder="Confirm Password:" required><br/>
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
                     </div>
                     </form>
+                    <p>{{employeeAlert}}</p>
                     {{!-- <div class="alert">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         This is an alert box.

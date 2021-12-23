@@ -5,6 +5,7 @@ const capacity = document.getElementById('capacity');
 const id = window.location.pathname.split('/pallets/')[1];
 const deletePallet = document.getElementById('deletePallet')
 const note = document.getElementById('note')
+const deleteNote = document.getElementById('deleteNote');
 
 //add event to delete pallet
 deletePallet.addEventListener('click', async () => {
@@ -26,8 +27,11 @@ addBox.addEventListener('click', async () =>{
 
  if(currentBox >= maxCapacity) {
     note.innerHTML = "Limit has been reached"
+    deleteNote.innerHTML = ""
     return
  } else {
+    note.innerHTML = ""
+    deletePallet.style.display = 'none'
            //Increment current boxes
            currentBox += 1
            //update the likes counter
@@ -52,9 +56,11 @@ removeBox.addEventListener('click', async () =>{
     console.log(currentBox)
 
     if (currentBox <= 0) {
-        return
-    } else {
-            //Increment current boxes
+        deleteNote.innerHTML = "It is time to delete this palette!"
+        return deletePallet.style.display = ''
+    } 
+    else {
+     //Increment current boxes
     currentBox -= 1
     //update the likes counter
     boxCounter.innerHTML = currentBox
