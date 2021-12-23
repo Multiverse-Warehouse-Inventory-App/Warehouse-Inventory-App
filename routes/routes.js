@@ -11,12 +11,16 @@ router.get('/', (req, res) =>{
     res.redirect('/home')
 })
 
+router.get("/home", (req, res) => {
+  res.render("home");
+});
+
+router.get("/about", (req, res) => {
+  res.render("about");
+});
+
 router.get("/signin", (req, res) => {
     res.render("signin");
-  });
-  
-  router.get("/home", (req, res) => {
-    res.render("home");
   });
   
   // Post Route triggered by form submit action
